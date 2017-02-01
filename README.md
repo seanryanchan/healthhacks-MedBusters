@@ -13,15 +13,16 @@ gem install bundler
 gem install rails
 ```
 
-### RailsAPI Setup
+### Rails Full Stack Setup
 ```
 git pull origin master
-cd csidevise/railsapi
+# CHANGE WORKING DIRECTORY TO RAILS APP
+cd healthhacks-MedBusters/medbusters 
 bundle install
 sudo service postgresql start
 sudo -su postgres psql #to start psql cli
-CREATE ROLE csidevise WITH LOGIN CREATEDB PASSWORD 'csidevise';
-\q #to quit psql
+create role medbusters with login createdb password 'medbusters';
+\q    # to quit PSQL CLI
 bundle exec rails db:create db:migrate db:seed
 bundle exec rails s
 ```
